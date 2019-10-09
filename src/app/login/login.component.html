@@ -1,0 +1,33 @@
+<div class="container-fluid text-center fadeIn h-100 bg-login p-0">
+    <div class="cover-login"></div>
+    <div class="content-login">
+        <div class="d-flex flex-column justify-content-center align-items-center h-100">
+            <form class="form-signin">
+                <img class="mb-4 fadeIn" src="assets/images/iso-logo.png" class="mb-3" width="70" />
+                <div class="text-center mb-4">
+                    <h4>¡Bienvenidos!</h4>
+                    <p class="text-black-50">al sistema de reportería <br /> Adaptativamente</p>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="input-username" class="form-control form-control-alternative"
+                        placeholder="Usuario" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="input-username" class="form-control form-control-alternative"
+                        placeholder="Contraseña">
+                </div>
+                <!-- <re-captcha id="captchaRef" #captchaRef (resolved)="resolved($event)"
+                siteKey="6LerY54UAAAAAPIhVw9VTVYA5JmpBECBP0T0AIgG"></re-captcha> -->
+                <div class="mt-4">
+                    <button class="btn btn-primary btn-block" [routerLink]="['/dashboard']">
+                        Ingresar
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="text-center footer fadeIn">
+            <p class="text-white-50">Copyright© 2019 <a href="https://adaptativamente.cl/"
+                    class="text-white-50">adaptativamente.cl</a></p>
+        </div>
+    </div>
+</div>
