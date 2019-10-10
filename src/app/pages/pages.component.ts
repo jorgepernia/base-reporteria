@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { GlobalService } from 'src/app/services/global.service';
+
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _gS: GlobalService) { }
 
   ngOnInit() {
   }

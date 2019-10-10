@@ -1,36 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+
+import { GlobalService } from 'src/app/services/global.service';
 
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
 
-//Pages
-import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { AvanzadoComponent } from './pages/avanzado/avanzado.component';
+//Modulos
+import { PagesModule } from './pages/pages.module';
 
-import { HeaderComponent } from './shared/header/header.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
+//Page Component
+import { LoginComponent } from './login/login.component';
+
+//page 404
 import { PagenofoundComponent } from './shared/pagenofound/pagenofound.component';
-import { PagesComponent } from './pages/pages.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PagenofoundComponent,
-    DashboardComponent,
-    AvanzadoComponent,
-    HeaderComponent,
-    SidebarComponent,
-    PagesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    AppRoutingModule,
+    PagesModule,
+    SharedModule
   ],
-  providers: [],
+  providers: [GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,25 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
-/*Style Sidebar*/
+/*Style Global*/
 body {
   overflow-x: hidden;
 }
+.pointer {
+  cursor: pointer;
+}
+/*Style Global*/
 
-#sidebar-wrapper {
+/*Style Sidebar*/
+.sidebar-wrapper {
   min-height: 100vh;
   margin-left: -15rem;
   -webkit-transition: margin 0.25s ease-out;
   -moz-transition: margin 0.25s ease-out;
   -o-transition: margin 0.25s ease-out;
   transition: margin 0.25s ease-out;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  will-change: transform;
+  overflow-y: auto;
+  left: 0px;
+  transform: translateX(0%);
+  background-color: #30358f !important;
 }
 
-#sidebar-wrapper .sidebar-heading {
+.sidebar-wrapper .sidebar-heading {
   padding: 0.875rem 1.25rem;
   font-size: 1.2rem;
 }
 
-#sidebar-wrapper .list-group {
+.sidebar-wrapper .list-group {
   width: 15rem;
 }
 
@@ -27,12 +41,12 @@ body {
   min-width: 100vw;
 }
 
-#wrapper.toggled #sidebar-wrapper {
+.toggled-sidebar .sidebar-wrapper {
   margin-left: 0;
 }
 
 @media (min-width: 768px) {
-  #sidebar-wrapper {
+  .sidebar-wrapper {
     margin-left: 0;
   }
 
@@ -41,7 +55,52 @@ body {
     width: 100%;
   }
 
-  #wrapper.toggled #sidebar-wrapper {
+  .toggled-sidebar .sidebar-wrapper {
     margin-left: -15rem;
   }
 }
+
+.toggled-sidebar {
+  margin-left: -15rem !important;
+}
+
+.toggled-wrap {
+  left: 0 !important;
+}
+
+@media (max-width: 575px) {
+  .toggled-sidebar {
+    position: absolute;
+    z-index: 999;
+    left: 15rem;
+  }
+  .navbar-movil {
+    z-index: 999;
+  }
+  .sidebar-heading {
+    padding-top: 80px !important;
+  }
+  .toggled-wrap {
+    left: 0rem !important;
+  }
+}
+.container-wrap {
+  position: absolute;
+  top: 0px;
+  left: 0rem;
+  right: 0px;
+  bottom: 0px;
+  overflow-y: auto;
+  background-color: #f1f1f1;
+  -webkit-transition: left 0.25s ease-out;
+  -moz-transition: left 0.25s ease-out;
+  -o-transition: left 0.25s ease-out;
+  transition: left 0.25s ease-out;
+}
+
+@media (min-width: 768px) {
+  .container-wrap {
+    left: 15rem;
+  }
+}
+/*Style Sidebar*/
