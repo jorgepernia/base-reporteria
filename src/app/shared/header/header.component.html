@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-movil">
-    <button class="btn btn-primary" (click)="this._gS.toggled = !this._gS.toggled">Toggle Menu</button>
-
+    <div class="hamburger pointer" (click)="this._gS.toggled = !this._gS.toggled">
+        <div class="_layer -top"></div>
+        <div class="_layer -mid"></div>
+        <div class="_layer -bottom"></div>
+    </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     </button>
