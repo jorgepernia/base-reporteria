@@ -4,6 +4,43 @@
 body {
   overflow-x: hidden;
 }
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  box-shadow: 0px 3px 8px #0000002b;
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #30358f !important;
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+  color: #fff !important;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: #5155a1 !important;
+  border-left: 2px solid #fff !important;
+  border-color: #007bff;
+}
+.list-group-item:hover {
+  z-index: 2;
+  color: #fff;
+  background-color: #5155a1 !important;
+  border-left: 2px solid #fff !important;
+  border-color: #007bff;
+}
 .pointer {
   cursor: pointer;
 }
@@ -91,7 +128,7 @@ body {
   right: 0px;
   bottom: 0px;
   overflow-y: auto;
-  background-color: #f1f1f1;
+  background-color: #fdfdfd;
   -webkit-transition: left 0.25s ease-out;
   -moz-transition: left 0.25s ease-out;
   -o-transition: left 0.25s ease-out;

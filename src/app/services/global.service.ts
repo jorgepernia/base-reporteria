@@ -6,5 +6,5 @@ import { Injectable } from '@angular/core';
 export class GlobalService {
 
     constructor() { }
-    toggled: boolean = false;
+    toggled: boolean = true;
 }

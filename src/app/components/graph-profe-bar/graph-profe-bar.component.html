@@ -1,0 +1,8 @@
+<ejs-chart [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis' height="350px" [tooltip]='tooltip'>
+    <e-series-collection>
+        <e-series [dataSource]='chartData' type='Column' xName='IDPROFE' yName='CANTEJERICIOS' name='Profesores'>
+        </e-series>
+        <e-series [dataSource]='chartData' type='Column' xName='IDPROFE' yName='CURSOS' name='Curso'>
+        </e-series>
+    </e-series-collection>
+</ejs-chart>

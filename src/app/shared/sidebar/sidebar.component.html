@@ -3,7 +3,8 @@
         <img src="assets/images/footer-logo.png" class="img-fluid">
     </div>
     <div class="list-group list-group-flush">
-        <a class="list-group-item list-group-item-action pointer active">Dashboard</a>
-        <a class="list-group-item list-group-item-action pointer">Perfil</a>
+        <a class="list-group-item pointer" [routerLink]="['/dashboard']" [routerLinkActive]="'active'">Inicio</a>
+        <a class="list-group-item pointer" [routerLink]="['/reporte-avanzado']"
+            [routerLinkActive]="'active'">Avanzado</a>
     </div>
 </div>

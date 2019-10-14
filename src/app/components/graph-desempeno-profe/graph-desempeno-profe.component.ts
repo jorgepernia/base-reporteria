@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-graph-desempeno',
-  templateUrl: './graph-desempeno.component.html',
-  styleUrls: ['./graph-desempeno.component.css']
+  selector: 'app-graph-desempeno-profe',
+  templateUrl: './graph-desempeno-profe.component.html',
+  styleUrls: ['./graph-desempeno-profe.component.css']
 })
-export class GraphDesempenoComponent implements OnInit {
-
+export class GraphDesempenoProfeComponent implements OnInit {
   public primaryXAxis: Object;
   public chartData: Object[];
   public chartDataProfe: Object[];
@@ -18,9 +17,8 @@ export class GraphDesempenoComponent implements OnInit {
 
   ngOnInit() {
     this.chartData = [
-      { curso: "4A", CANTEJERICIOS: 50 },
-      { curso: "4B", CANTEJERICIOS: 70 },
-      { curso: "4C", CANTEJERICIOS: 40 },
+      { IDPROFE: "N14", DESEMPENOPROFE: 80, DESEMPENOCURSO: 55 },
+      { IDPROFE: "N15", DESEMPENOPROFE: 70, DESEMPENOCURSO: 65 },
     ];
     this.primaryXAxis = {
       valueType: 'Category',
@@ -35,4 +33,5 @@ export class GraphDesempenoComponent implements OnInit {
       enable: true
     }
   }
+
 }

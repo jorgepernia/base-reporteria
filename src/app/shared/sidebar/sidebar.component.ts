@@ -11,6 +11,8 @@ export class SidebarComponent implements OnInit {
 
   constructor(public _gS: GlobalService) { }
 
+  isActive: boolean = true;
+
   ngOnInit() {
   }
 

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-graph-desempeno',
-  templateUrl: './graph-desempeno.component.html',
-  styleUrls: ['./graph-desempeno.component.css']
+  selector: 'app-graph-tareas',
+  templateUrl: './graph-tareas.component.html',
+  styleUrls: ['./graph-tareas.component.css']
 })
-export class GraphDesempenoComponent implements OnInit {
+export class GraphTareasComponent implements OnInit {
 
   public primaryXAxis: Object;
   public chartData: Object[];
@@ -18,16 +18,16 @@ export class GraphDesempenoComponent implements OnInit {
 
   ngOnInit() {
     this.chartData = [
-      { curso: "4A", CANTEJERICIOS: 50 },
-      { curso: "4B", CANTEJERICIOS: 70 },
-      { curso: "4C", CANTEJERICIOS: 40 },
+      { curso: "4A", TAREASREALIZADAS: 50, IESTRABAJASDOS: 15 },
+      { curso: "4B", TAREASREALIZADAS: 70, IESTRABAJASDOS: 10 },
+      { curso: "4C", TAREASREALIZADAS: 40, IESTRABAJASDOS: 15 }
     ];
     this.primaryXAxis = {
       valueType: 'Category',
       // isIndexed: true,
     };
     this.primaryYAxis = {
-      minimum: 0, maximum: 100,
+      minimum: 0, maximum: 80,
       interval: 20, title: 'Promedio'
     };
     this.title = 'Olympic Medals';
@@ -35,4 +35,5 @@ export class GraphDesempenoComponent implements OnInit {
       enable: true
     }
   }
+
 }

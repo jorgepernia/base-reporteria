@@ -1,0 +1,11 @@
+<ejs-chart id="chart-container" [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis'
+    [legendSettings]='legendSettings' [tooltip]='tooltip' height="350px">
+    <e-series-collection>
+        <e-series [dataSource]='chartData' type='Line' xName='NOMBREDIA' yName='sales' name="N14" width=2
+            [marker]='marker'>
+        </e-series>
+        <e-series [dataSource]='chartData2' type='Line' xName='NOMBREDIA' yName='sales' name='N15' width=2
+            [marker]='marker'>
+        </e-series>
+    </e-series-collection>
+</ejs-chart>
