@@ -8,21 +8,28 @@ import { Component, OnInit } from '@angular/core';
 export class GraphDesempenoProfeComponent implements OnInit {
   public primaryXAxis: Object;
   public chartData: Object[];
-  public chartDataProfe: Object[];
+  public chartDataCurso: Object[];
   public title: string;
   public primaryYAxis: Object;
   public tooltip: Object;
+  public palette: string[];
 
   constructor() { }
 
   ngOnInit() {
     this.chartData = [
-      { IDPROFE: "N14", DESEMPENOPROFE: 80, DESEMPENOCURSO: 55 },
-      { IDPROFE: "N15", DESEMPENOPROFE: 70, DESEMPENOCURSO: 65 },
+      { IDPROFE: "N14", DESEMPENOPROFE: 30 },
+      { IDPROFE: "N15", DESEMPENOPROFE: 50 },
+      { IDPROFE: "N15", DESEMPENOPROFE: 60 },
+    ];
+    this.chartDataCurso = [
+      { IDCURSO: "4A", DESEMPENOCURSO: 20 },
+      { IDCURSO: "4B", DESEMPENOCURSO: 40 },
+      { IDCURSO: "4C", DESEMPENOCURSO: 80 },
     ];
     this.primaryXAxis = {
       valueType: 'Category',
-      // isIndexed: true,
+      isIndexed: true,
     };
     this.primaryYAxis = {
       minimum: 0, maximum: 100,
@@ -32,6 +39,8 @@ export class GraphDesempenoProfeComponent implements OnInit {
     this.tooltip = {
       enable: true
     }
+    this.palette = ['#3498DB', '#58D68D', '#f8b883',
+      '#70ad47', '#dd8abd', '#7f84e8', '#7bb4eb', '#ea7a57'];
   }
 
 }

@@ -13,6 +13,7 @@ export class GraphTareasProfeComponent implements OnInit {
   public title: string;
   public primaryYAxis: Object;
   public tooltip: Object;
+  public palette: string[];
 
   constructor() { }
 
@@ -33,6 +34,8 @@ export class GraphTareasProfeComponent implements OnInit {
     this.tooltip = {
       enable: true
     }
+    this.palette = ['#357cd2', '#f8b883', , '#f8b883',
+      '#70ad47', '#dd8abd', '#7f84e8', '#7bb4eb', '#ea7a57'];
   }
 
 }

@@ -1,4 +1,5 @@
-<ejs-chart [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis' height="350px" [tooltip]='tooltip'>
+<ejs-chart [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis' height="350px" [tooltip]='tooltip'
+    [palettes]='palette'>
     <e-series-collection>
         <e-series [dataSource]='chartData' type='Column' xName='IDPROFE' yName='TAREASREALIZADAS'
             name='Tareas Realizadas'>

@@ -20,14 +20,13 @@ import { LoginComponent } from './login/login.component';
 
 //page 404
 import { PagenofoundComponent } from './shared/pagenofound/pagenofound.component';
-
-import { CategoryService, BarSeriesService, ColumnSeriesService, LineSeriesService, LegendService, DataLabelService, MultiLevelLabelService, SelectionService } from '@syncfusion/ej2-angular-charts';
+import { PivotViewModule } from '@syncfusion/ej2-angular-pivotview';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PagenofoundComponent
+    PagenofoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +35,8 @@ import { CategoryService, BarSeriesService, ColumnSeriesService, LineSeriesServi
     PagesModule,
     SharedModule,
     ComponenetsModule,
-    RouterModule
+    RouterModule,
+    PivotViewModule
   ],
   providers: [GlobalService],
   bootstrap: [AppComponent]

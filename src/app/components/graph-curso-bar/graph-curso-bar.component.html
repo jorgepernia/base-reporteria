@@ -1,7 +1,6 @@
-<ejs-chart [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis' height="350px" [tooltip]='tooltip'>
+<ejs-chart [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis' height="350px" [tooltip]='tooltip'
+    (pointRender)='pointRender($event)'>
     <e-series-collection>
         <e-series [dataSource]='chartData' type='Column' xName='curso' yName='CANTEJERICIOS' name='Cursos'></e-series>
-        <!-- <e-series [dataSource]='chartDataProfe' type='Column' xName='profe' yName='CANTEJERICIOS' name='Profesor'>
-        </e-series> -->
     </e-series-collection>
 </ejs-chart>
