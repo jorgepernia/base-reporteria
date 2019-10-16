@@ -1,0 +1,14 @@
+<table class="table table-bordered">
+    <thead class="text-center">
+        <tr class="thead-dark">
+            <th scope="col">Proesores</th>
+            <th scope="col">Capacitación Online</th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        <tr scope="row" *ngFor="let data of CapProfe">
+            <td><b> {{ data.NOMBREPROFE }} </b></td>
+            <td>{{ data.CAPACITADO }}%</td>
+        </tr>
+    </tbody>
+</table>

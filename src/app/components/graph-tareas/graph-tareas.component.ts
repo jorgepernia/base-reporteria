@@ -19,23 +19,38 @@ export class GraphTareasComponent implements OnInit {
 
   ngOnInit() {
     this.chartData = [
-      { curso: "4A", TAREASREALIZADAS: 50, IESTRABAJASDOS: 15 },
-      { curso: "4B", TAREASREALIZADAS: 70, IESTRABAJASDOS: 10 },
-      { curso: "4C", TAREASREALIZADAS: 40, IESTRABAJASDOS: 15 }
+      { CURSO: "4A", TAREALAB: 50, TAREAHOG: 15 },
+      { CURSO: "4B", TAREALAB: 70, TAREAHOG: 10 },
+      { CURSO: "4C", TAREALAB: 40, TAREAHOG: 15 }
     ];
     this.primaryXAxis = {
       valueType: 'Category',
-      // isIndexed: true,
+      titleStyle: {
+        size: '18px', color: '#333',
+        fontWeight: 'bold'
+      },
+      labelStyle: {
+        size: '16px', color: '#888',
+        fontWeight: 'bold'
+      }
     };
     this.primaryYAxis = {
-      minimum: 0, maximum: 80,
-      interval: 20, title: 'Promedio'
+      minimum: 0, maximum: 100,
+      interval: 20, title: 'Promedio',
+      labelFormat: '{value}%',
+      titleStyle: {
+        size: '18px', color: '#333',
+        fontWeight: 'bold'
+      },
+      labelStyle: {
+        size: '12px', color: '#888',
+        fontWeight: 'bold'
+      }
     };
-    this.title = 'Olympic Medals';
     this.tooltip = {
       enable: true
     }
-    this.palette = ['#357cd2', '#f8b883', '#f8b883',
+    this.palette = ['#48C9B0', '#AF7AC5', '#f8b883',
       '#70ad47', '#dd8abd', '#7f84e8', '#7bb4eb', '#ea7a57'];
   }
 

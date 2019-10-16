@@ -1,0 +1,27 @@
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th scope="col">Curso</th>
+                <th scope="col">Profesor</th>
+                <th scope="col">OA</th>
+                <th scope="col">IE</th>
+                <th scope="col">Cobertura Curricular</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of desempenoCursos" class="text-center">
+                <th scope="row">
+                    {{ data.CURSO }}
+                </th>
+                <td>{{ data.PROFESOR }}</td>
+                <td>
+                    {{ data.OA }}
+                </td>
+                <td>{{ data.IE }}</td>
+                <td>{{ data.CC }}/99</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

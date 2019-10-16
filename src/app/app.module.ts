@@ -22,6 +22,8 @@ import { LoginComponent } from './login/login.component';
 import { PagenofoundComponent } from './shared/pagenofound/pagenofound.component';
 import { PivotViewModule } from '@syncfusion/ej2-angular-pivotview';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,8 @@ import { PivotViewModule } from '@syncfusion/ej2-angular-pivotview';
     SharedModule,
     ComponenetsModule,
     RouterModule,
-    PivotViewModule
+    PivotViewModule,
+    NgbModule
   ],
   providers: [GlobalService],
   bootstrap: [AppComponent]

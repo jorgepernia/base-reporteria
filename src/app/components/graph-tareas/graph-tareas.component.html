@@ -1,10 +1,11 @@
 <ejs-chart [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis' height="350px" [tooltip]='tooltip'
     [palettes]='palette'>
     <e-series-collection>
-        <e-series [dataSource]='chartData' type='Column' xName='curso' yName='TAREASREALIZADAS'
-            name='Tareas Realizadas'>
+        <e-series [dataSource]='chartData' type='Column' xName='CURSO' yName='TAREALAB' name='Tareas Laboratorio'
+            legendShape='Circle'>
         </e-series>
-        <e-series [dataSource]='chartData' type='Column' xName='curso' yName='IESTRABAJASDOS' name='IEs Trabajados'>
+        <e-series [dataSource]='chartData' type='Column' xName='CURSO' yName='TAREAHOG' name='Tareas Hogar'
+            legendShape='Circle'>
         </e-series>
     </e-series-collection>
 </ejs-chart>

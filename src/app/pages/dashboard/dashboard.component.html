@@ -104,12 +104,14 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <h5 class="mb-3">Desempeño Curso</h5>
+                            <h5 class="mb-3">Desempeño global por curso</h5>
                             <app-graph-desempeno></app-graph-desempeno>
                         </div>
                         <div class="col-md-6">
-                            <h5 class="mb-3">Desempeño Profesores</h5>
-                            <app-graph-desempeno-profe></app-graph-desempeno-profe>
+                            <h5 class="mb-4">Tabla Desempeño</h5>
+                            <app-tabla-desempeno></app-tabla-desempeno>
+                            <h5 class="mb-3">Capacitación Profesores</h5>
+                            <app-tabla-capacitacion></app-tabla-capacitacion>
                         </div>
                     </div>
                 </div>
@@ -120,26 +122,7 @@
         <div class="col-md-12 col-xs-12">
             <div class="card shadow py-2 mb-3">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5 class="mb-3">Tareas por curso</h5>
-                            <app-graph-tareas></app-graph-tareas>
-                        </div>
-                        <div class="col-md-6">
-                            <h5 class="mb-3">Tareas por Profesores</h5>
-                            <app-graph-tareas-profe></app-graph-tareas-profe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 col-xs-12">
-            <div class="card shadow py-2 mb-3">
-                <div class="card-body">
-                    <h5 class="mb-3">Nivel de uso goblal</h5>
-                    <app-graph-nivel-uso></app-graph-nivel-uso>
+                    <!-- <app-graph-nivel-uso></app-graph-nivel-uso> -->
                     <h5 class="mt-3 mb-4">Nivel de uso por curso</h5>
                     <div class="row">
                         <div class="col-md-4">
@@ -165,12 +148,12 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <h5 class="mb-3">Promedio de Ejercicios de Cursos</h5>
-                            <app-graph-curso-bar *ngIf="cargandoCurso"></app-graph-curso-bar>
+                            <h5 class="mb-3">Promedio tareas por curso</h5>
+                            <app-graph-tareas></app-graph-tareas>
                         </div>
                         <div class="col-md-6">
-                            <h5>Promedio de actividad Profesores</h5>
-                            <app-graph-profe-bar *ngIf="cargandoProfe"></app-graph-profe-bar>
+                            <h5 class="mb-4">Tareas por Profesores</h5>
+                            <app-tabla-tareas></app-tabla-tareas>
                         </div>
                     </div>
                 </div>

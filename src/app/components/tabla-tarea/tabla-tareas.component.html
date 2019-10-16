@@ -1,0 +1,16 @@
+<table class="table table-bordered">
+    <thead class="text-center">
+        <tr class="thead-dark">
+            <th scope="col">Curso</th>
+            <th scope="col">Tareas Laboratorio</th>
+            <th scope="col">Tareas Hogar</th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        <tr scope="row" *ngFor="let data of tareasTipo">
+            <td><b> {{ data.CURSO }} </b></td>
+            <td>{{ data.TAREALAB }}</td>
+            <td>{{ data.TAREAHOG }}</td>
+        </tr>
+    </tbody>
+</table>

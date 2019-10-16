@@ -15,6 +15,7 @@ export class GraphDesempenoComponent implements OnInit {
   public title: string;
   public primaryYAxis: Object;
   public tooltip: Object;
+  public legendSettings: Object;
   public pointRender(args: IPointRenderEventArgs): void {
     let seriesColor: string[] = ['#357cd2', '#e56590', '#f8b883',
       '#70ad47', '#dd8abd', '#7f84e8', '#7bb4eb', '#ea7a57'];
@@ -29,13 +30,31 @@ export class GraphDesempenoComponent implements OnInit {
       { curso: "4B", CANTEJERICIOS: 70 },
       { curso: "4C", CANTEJERICIOS: 40 },
     ];
+    this.legendSettings = { visible: false };
     this.primaryXAxis = {
       valueType: 'Category',
-      // isIndexed: true,
+      title: 'Cursos',
+      titleStyle: {
+        size: '18px', color: '#333',
+        fontWeight: 'bold'
+      },
+      labelStyle: {
+        size: '16px', color: '#888',
+        fontWeight: 'bold'
+      }
     };
     this.primaryYAxis = {
       minimum: 0, maximum: 100,
-      interval: 20, title: 'Promedio'
+      interval: 20, title: 'Promedio',
+      labelFormat: '{value}%',
+      titleStyle: {
+        size: '18px', color: '#333',
+        fontWeight: 'bold'
+      },
+      labelStyle: {
+        size: '12px', color: '#888',
+        fontWeight: 'bold'
+      }
     };
     this.title = 'Olympic Medals';
     this.tooltip = {
